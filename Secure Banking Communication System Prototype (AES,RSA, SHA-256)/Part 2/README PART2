@@ -1,0 +1,61 @@
+
+---
+
+# **Part 2 — Asymmetric Cryptography (RSA Key Pair & Encrypted Report)**  
+**Tools Used:** CrypTool 2.1 (Kryptos Workflow Environment)
+
+Part 2 introduces **asymmetric cryptography** into the secure banking communication system. While Part 1 focused on symmetric encryption (AES & DES) and hashing (SHA‑256), this section adds **RSA public‑key cryptography**, which provides a second layer of protection for the financial report.
+
+This stage prepares the system for **Part 3**, where digital signatures and final integrity verification will be added.
+
+---
+
+## 🔐 **What Part 2 Adds to the System**
+
+### **1. RSA Public/Private Key Pair Generation**  
+Using Kryptos, I generated multiple RSA key pairs to simulate:
+
+- A **sender** encrypting a report with the receiver’s public key  
+- A **receiver** decrypting the report using their private key  
+
+This demonstrates how asymmetric cryptography enables **secure communication without sharing secret keys**.
+
+---
+
+### **2. RSA Encryption of the Final Report**  
+The financial report (already encrypted in Part 1 using AES) is now:
+
+1. **Encrypted again using RSA**  
+2. **Decrypted using the matching private key**  
+
+This creates a **two‑layer protection model**:
+
+- **Layer 1:** AES (fast symmetric encryption)  
+- **Layer 2:** RSA (secure public‑key encryption)  
+
+Even if the symmetric key were compromised, the RSA layer still protects the data.
+
+---
+
+### **3. Preparing for Part 3 (Digital Signatures + SHA‑256)**  
+Part 2 sets the stage for the final security layer:
+
+- **Digital Signature** — proves authenticity and non‑repudiation  
+- **SHA‑256 Hashing** — ensures the report was not modified  
+
+Part 3 will combine RSA signing + hashing to complete the full cryptographic pipeline.
+
+---
+
+## 🎯 **Purpose of Part 2**  
+Part 2 demonstrates:
+
+- How RSA public/private keys secure communication  
+- How asymmetric encryption adds a second layer of protection  
+- How encrypted reports can be decrypted only by the correct private key  
+- How asymmetric cryptography complements symmetric encryption  
+- How the system prepares for digital signatures in Part 3  
+
+This section transitions the project from **confidentiality only** → **confidentiality + authenticity + integrity**.
+
+---
