@@ -1,1 +1,92 @@
 
+---
+
+# **Part 3 — Digital Signatures, Hashing, and Final System Verification**  
+**Tools Used:** CrypTool 2.1 (Kryptos Workflow Environment)
+
+Part 3 completes the secure banking communication system by adding the **final layer of protection**:  
+**digital signatures, multi‑algorithm hashing, and full system verification**.
+
+Part 1 established confidentiality using AES and DES.  
+Part 2 added RSA public‑key encryption for a second layer of protection.  
+Part 3 now ensures **authenticity, integrity, and non‑repudiation**, transforming the project into a complete end‑to‑end secure communication pipeline.
+
+---
+
+## 🔐 **What Part 3 Adds to the System**
+
+### **1. Digital Signature Generation (RSA Signing)**  
+Using Kryptos, I generated a **digital signature** for the final encrypted report.  
+This signature proves:
+
+- The report came from the legitimate sender  
+- The sender cannot deny creating it (non‑repudiation)  
+- The report has not been altered  
+
+The signature file is included in this folder.
+
+---
+
+### **2. Multi‑Algorithm Hashing (MD5, SHA‑1, SHA‑256, SHA‑384, SHA‑512)**  
+To demonstrate integrity verification across multiple standards, I generated **five different hashes** of the final report:
+
+- MD5  
+- SHA‑1  
+- SHA‑256  
+- SHA‑384  
+- SHA‑512  
+
+SHA‑256 is the primary algorithm used in the final system, but the additional hashes show how different digest lengths behave and how integrity checks can be performed across multiple algorithms.
+
+---
+
+### **3. Digital Signature Verification**  
+Verification images show the Kryptos process confirming that:
+
+- The signature is valid  
+- The report has not been tampered with  
+- The public key matches the original signing key  
+
+This proves the system’s **authenticity and integrity** end‑to‑end.
+
+---
+
+### **4. Full Banking System Architecture**  
+This folder includes the **Full Banking System diagram**, which visually represents the entire security pipeline:
+
+1. AES encryption (confidentiality)  
+2. RSA encryption (second‑layer confidentiality)  
+3. SHA‑256 hashing (integrity)  
+4. RSA digital signature (authenticity + non‑repudiation)  
+5. Verification (receiver confirms everything matches)
+
+This diagram ties together all three parts of the project into one complete secure communication model.
+
+---
+
+## 🎯 **Purpose of Part 3**  
+Part 3 demonstrates:
+
+- How digital signatures authenticate the sender  
+- How hashing ensures message integrity  
+- How RSA signing + SHA‑256 create a trusted verification process  
+- How all three parts combine into a complete secure banking system  
+- How modern systems layer multiple cryptographic protections  
+
+This final stage completes the transformation from a simple encrypted message to a **fully verified, tamper‑proof, authenticated communication system**.
+
+---
+| File Name | Description |
+| --- | --- |
+| **FR_Signature.sign** | RSA digital signature for the final report |
+| **MD5 FR.hash** | MD5 hash of the final report |
+| **SHA‑1 FR.hash** | SHA‑1 hash of the final report |
+| **SHA‑256 FR.hash** | SHA‑256 hash (primary integrity check) |
+| **SHA‑384 FR.hash** | SHA‑384 hash of the report |
+| **SHA‑512 FR.hash** | SHA‑512 hash of the report |
+| **Digital Signature Verification.jpg** | Kryptos verification output showing signature validity |
+| **Verification 1–5.jpg** | Full verification sequence confirming authenticity and integrity |
+| **Full Banking System.jpg** | Complete system architecture diagram |
+| **FUll Banking Workspace.cwm** | Kryptos workflow for the final integrated system |
+
+When you're ready, I’ll send the **file table second**, just like you asked.
