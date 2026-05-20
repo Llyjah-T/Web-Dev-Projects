@@ -1,0 +1,86 @@
+
+---
+
+# **Part 1 — Symmetric Cryptography (AES & DES)**  
+**Tools Used:** CrypTool 2.1 (Kryptos Workflow Environment)
+
+This section demonstrates how symmetric cryptography can be used to secure sensitive financial communication in an online banking environment. Using **CrypTool 2.1 with the Kryptos workflow system**, I implemented and compared two symmetric encryption algorithms: **AES** and **DES**. These methods form the foundation of confidentiality in secure digital banking systems.
+
+---
+
+## 🔐 **Encryption Methods Used**
+
+### **AES (Advanced Encryption Standard)**  
+AES was used as the **primary encryption method** in this project.
+
+**Key characteristics:**
+- Industry standard for secure online communication  
+- Fast and efficient for high‑traffic banking systems  
+- Supports 128/192/256‑bit keys  
+- Strong resistance to brute‑force attacks  
+
+AES encryption was performed using the **AES Encryption module inside Kryptos**.
+
+---
+
+### **DES (Data Encryption Standard)**  
+DES was included for **comparison and legacy demonstration**.
+
+**Key characteristics:**
+- 56‑bit key (now considered insecure)  
+- Useful for showing weaknesses of older encryption methods  
+- Demonstrates why modern systems transitioned to AES  
+
+DES encryption was performed using the **DES Encryption module inside Kryptos**.
+
+---
+
+## 🔑 **Key Generation**
+All keys were generated **randomly** within Kryptos.
+
+Random key generation ensures:
+- Higher confidentiality  
+- Lower predictability  
+- Reduced risk of brute‑force or pattern‑based attacks  
+
+---
+
+## 🧪 **Hashing (Integrity Verification)**  
+After encryption, I generated a **SHA‑256 hash** of the AES‑encrypted file.
+
+This ensures:
+- The encrypted message was not altered  
+- Integrity can be verified by the receiver  
+- Any modification triggers a mismatch  
+
+Hashing was performed using the **SHA‑256 module inside Kryptos**.
+
+---
+
+## 🎯 **Purpose of Part 1**
+Part 1 demonstrates:
+
+- How symmetric encryption protects confidentiality  
+- Why AES is preferred over DES in modern systems  
+- How hashing ensures integrity  
+- How encryption workflows are built using Kryptos in CrypTool 2.1  
+- The foundation for Part 2 (asymmetric cryptography and digital signatures)  
+
+This section establishes the core security mechanisms required for secure digital banking communication.
+
+---
+
+| File Name | Description |
+| --- | --- |
+| **AES Workspace.cwm** | CrypTool 2.1 Kryptos workflow for AES encryption process |
+| **Cmpsc 281 Capstone Project Overview.docx** | Project overview and objectives document |
+| **DES Workspace.cwm** | CrypTool 2.1 Kryptos workflow for DES encryption comparison |
+| **Final Encryption.txt** | Final encrypted output text after AES/DES processing |
+| **Final Report.enc** | Encrypted report file produced by CrypTool |
+| **Financial Transaction Report.docx** | Plaintext financial report used as input for encryption |
+| **Hash of AES Report.cwm** | CrypTool 2.1 Kryptos workflow for SHA‑256 hash generation |
+| **RAES Encryption.txt** | AES encryption results recorded in text format |
+| **RDES Encryption.txt** | DES encryption results recorded in text format |
+| **Report.private** | Private RSA key file used for digital signature generation |
+| **Report.public** | Public RSA key file used for signature verification |
+| **Report.txt** | Notes and observations summarizing Part 1 encryption process |
